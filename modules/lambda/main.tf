@@ -3,7 +3,7 @@ resource "aws_lambda_function" "add_user" {
   handler       = "add_user.lambda_handler"
   runtime       = "python3.8"
   role          = var.lambda_exec_role_arn
-  filename      = "${path.modules}/lambda_functions/add_user.zip"
+  filename      = "${path.root}/lambda_functions/add_user.zip"
 
   environment {
     variables = {
@@ -17,7 +17,7 @@ resource "aws_lambda_function" "get_users" {
   handler       = "get_users.lambda_handler"
   runtime       = "python3.8"
   role          = var.lambda_exec_role_arn
-  filename      = "${path.modules}/lambda_functions/get_users.zip"
+  filename      = "${path.root}/lambda_functions/get_users.zip"
 
   environment {
     variables = {
