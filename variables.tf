@@ -23,12 +23,16 @@ variable "api_gateway_name" {
 }
  resource "aws_lambda_function" "add_user" {
    filename         = var.add_user_zip_file
-   
+   type        = string
+ }
+
  }
 
  resource "aws_lambda_function" "get_users" {
    filename         = var.get_users_zip_file
-   
+   type        = string
+ }
+
  }
  
 
