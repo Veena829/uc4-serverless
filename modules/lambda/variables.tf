@@ -21,4 +21,4 @@ variable "lambda_exec_role_arn" {
    description = "Path to the get_users.zip file"
    type        = string
  }
- ```
+ 
