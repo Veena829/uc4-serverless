@@ -21,18 +21,13 @@ variable "api_gateway_name" {
   type        = string
   default     = "user_data_api"
 }
- resource "aws_lambda_function" "add_user" {
-   filename         = var.add_user_zip_file
-   type        = string
- }
 
- }
+variable "add_user_zip_file" {
+  description = "Path to the add_user.zip file"
+  type        = string
+}
 
- resource "aws_lambda_function" "get_users" {
-   filename         = var.get_users_zip_file
-   type        = string
- }
-
- }
- 
-
+variable "get_users_zip_file" {
+  description = "Path to the get_users.zip file"
+  type        = string
+}
